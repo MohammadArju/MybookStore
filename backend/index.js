@@ -11,9 +11,21 @@ dotenv.config();
 
 const app = express();
 
+// ✅ Allowed origins list
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://mybook-store-hazel.vercel.app"
+];
+
 //middlewares
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -30,6 +42,9 @@ mongoose
   .connect(MONGO_URL)
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server is running on port http://localhost:${PORT}`);
+      console.log(`✅ Server is running on port http://localhost:${PORT}`);
     });
+  })
+  .catch((err) => {
+    console.error("❌ MongoDB connection error:", err);
   });
