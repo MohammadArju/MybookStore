@@ -45,7 +45,7 @@ const Freebook = () => {
     useEffect(() => {
       const getBook = async () => {
         try {
-          const response = await axios.get("http://localhost:3000");
+          const response = await axios.get("https://mybookstore-9rbu.onrender.com");
           const filteredBooks = response.data.filter(
             (book) => book.price === 0
           );

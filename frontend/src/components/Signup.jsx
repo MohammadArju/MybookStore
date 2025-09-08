@@ -16,7 +16,7 @@ const Signup = () => {
     name, email, password;
 
     try {
-      const response = await axios.post("http://localhost:3000/signup", {
+      const response = await axios.post("https://mybookstore-9rbu.onrender.com/signup", {
         name,
         email,
         password,
