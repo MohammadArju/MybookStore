@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+
 const Signup = () => {
   const navigate = useNavigate();
   const nameRef = useRef();
@@ -13,20 +14,23 @@ const Signup = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    name, email, password;
 
     try {
-      const response = await axios.post("http://localhost:3000/signup", {
-        name,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/signup`, // ✅ env से URL
+        {
+          name,
+          email,
+          password,
+        }
+      );
+
       localStorage.setItem("isLoggedIn", true);
       localStorage.setItem("user", JSON.stringify(response.data.user));
+
       toast.success("Signup Successfully");
       navigate("/");
     } catch (err) {
-      err;
       toast.error(
         err?.response?.data?.message || "Signup failed. Please try again."
       );
@@ -34,7 +38,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center  p-6">
+    <div className="min-h-screen flex items-center justify-center p-6">
       <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-white rounded-2xl shadow-2xl p-10 w-full max-w-md">
         <h2 className="text-3xl font-bold mb-6 text-center">
           Create an Account

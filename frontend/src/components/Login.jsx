@@ -19,12 +19,16 @@ const Login = () => {
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
-    email, password;
+
     try {
-      const response = await axios.post("http://localhost:3000/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/login`, // ✅ env variable से backend URL
+        {
+          email,
+          password,
+        }
+      );
+
       localStorage.setItem("isLoggedIn", true);
       document.getElementById("my_modal_3").close();
       toast.success("Login Successfully");
