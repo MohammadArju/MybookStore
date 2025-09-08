@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Story Book",
+    "title": "A collection of magical short stories for kids.",
+    "price": 0,
+    "category": "Free",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Children Rhymes",
+    "title": "Colorful rhymes with cute illustrations for kids.",
+    "price": 0,
+    "category": "Free",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Moral Stories",
+    "title": "Classic tales with life lessons for children.",
+    "price": 0,
+    "category": "Free",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Fun Facts Book",
+    "title": "Amazing facts that make you go wow!",
+    "price": 0,
+    "category": "Free",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Art Activities",
+    "title": "Creative drawing & coloring fun for kids.",
+    "price": 0,
+    "category": "Free",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Beginner English",
+    "title": "Simple grammar and vocabulary for starters.",
+    "price": 0,
+    "category": "Free",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Science Basics",
+    "title": "Explore the fundamentals of science and discoveries.",
+    "price": 79,
+    "category": "Education",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Mystery Tales",
+    "title": "Dive into thrilling mystery and suspense stories.",
+    "price": 129,
+    "category": "Fiction",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Startup Guide",
+    "title": "Learn how to build your own startup from scratch.",
+    "price": 199,
+    "category": "Business",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 10,
+    "name": "World History",
+    "title": "An illustrated journey through world events.",
+    "price": 149,
+    "category": "History",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Poetry Vibes",
+    "title": "Heart-touching poems by famous authors.",
+    "price": 59,
+    "category": "Literature",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Cooking Easy",
+    "title": "Quick and easy recipes for daily cooking.",
+    "price": 99,
+    "category": "Cooking",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Yoga for All",
+    "title": "Step-by-step guide to daily yoga routines.",
+    "price": 89,
+    "category": "Health",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Digital Marketing",
+    "title": "Master the art of online marketing & SEO.",
+    "price": 149,
+    "category": "Marketing",
+    "image": "/bookPhoto.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Advanced Coding",
+    "title": "Level up your coding with advanced JS & Python.",
+    "price": 199,
+    "category": "Technology",
+    "image": "/bookPhoto.jpg"
+  }
+]
