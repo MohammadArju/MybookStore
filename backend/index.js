@@ -1,8 +1,8 @@
-// local modules
+//local modules
 const bookRoutes = require("./routes/bookRoutes");
 const userRoutes = require("./routes/userRoutes");
 
-// external modules
+//external modules
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -11,18 +11,13 @@ dotenv.config();
 
 const app = express();
 
-// middlewares
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",                   // local dev frontend
-      "https://book-store-one-theta.vercel.app"  // deployed frontend
-    ],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+//middlewares
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
 
 app.use(express.json());
 app.use(bookRoutes);
@@ -35,9 +30,6 @@ mongoose
   .connect(MONGO_URL)
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`✅ Server is running on port http://localhost:${PORT}`);
+      console.log(`Server is running on port http://localhost:${PORT}`);
     });
-  })
-  .catch((err) => {
-    console.error("❌ MongoDB connection failed:", err);
   });

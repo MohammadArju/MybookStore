@@ -45,7 +45,7 @@ const Freebook = () => {
     useEffect(() => {
       const getBook = async () => {
         try {
-          const response = await axios.get(process.env.REACT_APP_BACKEND_URL);
+          const response = await axios.get("http://localhost:3000");
           const filteredBooks = response.data.filter(
             (book) => book.price === 0
           );
